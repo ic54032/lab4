@@ -1,0 +1,72 @@
+#zaglavlje{
+    grid-area: zaglavlje;
+    background-image: url("../slike/pozdrav4.jpg");
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+#kolicina{
+    grid-area: kolicina;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    vertical-align: middle;
+    align-items: normal;
+}
+#grid{
+    display: grid;
+    height: 97vh;
+    grid-template-columns: 0.2fr 1.5fr 0.5fr;
+    grid-template-rows: 0.2fr 0.7fr 1.3fr;
+    grid-template-areas: 
+    "logo-div blank kosIpov"
+    "zaglavlje zaglavlje zaglavlje"
+    "kolicina kolicina kolicina";
+    gap: 0.3rem;
+}
+#brojac{
+    width:80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+li{
+    list-style-type: none;
+    font-size: large;
+}
+#logo-cart{
+    width:90px;
+    cursor: pointer;
+}
+#logo-div{
+    grid-area: logo-div;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#blank{
+    grid-area: blank;
+}
+#kosIpov{
+    grid-area: kosIpov;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.kosarica{
+    width: 40px;
+}
+@media only screen and (max-width:1024px){
+    #grid{
+        grid-template-columns: 0.1fr 1fr;
+        grid-template-rows: 0.1fr 0.2fr 0.8fr 1.8fr;
+        grid-template-areas:
+        "logo-div blank"
+        "kosIpov kosIpov"
+        "zaglavlje zaglavlje"
+        "kolicina kolicina ";
+    }
+
+ }

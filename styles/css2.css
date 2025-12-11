@@ -1,0 +1,187 @@
+html{
+  min-width: 500px;
+  min-height: 700px;
+}
+li{
+  cursor: pointer;
+}
+.grid-container {
+    display: grid;
+    height: 97vh;
+    grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr 1.1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr 1.5fr 1fr;
+    grid-template-areas:
+        "log tren tren tren tren kos"
+        "kat poz poz poz poz poz"
+        "kat poz poz poz poz poz"
+        "kat proiz proiz proiz proiz proiz"
+        "kont proiz proiz proiz proiz proiz"
+        "nev proiz proiz proiz proiz proiz";
+    grid-gap:0.2rem;
+  }
+  .grid-item {
+    background-color: #ccc;
+    font-size: 20px;
+    text-align: center;
+  } 
+
+  #log{
+    grid-area: log;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(194, 225, 235);
+  }
+  #tren{
+    grid-area: tren;
+    background-color: rgb(194, 225, 235);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #kos{
+    grid-area: kos;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(194, 225, 235);
+  }
+  #kat{
+    font-size: large;
+    grid-area: kat;
+    background-color: rgb(235, 235, 206);
+    align-items: left;
+    display: flex;
+    justify-content: left;
+  }
+  #poz{
+    grid-area: poz;
+  }
+  #proiz{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    grid-area: proiz;
+    justify-content: space-around;
+    flex-flow: wrap;
+    background-color: rgb(235, 235, 206);
+    
+  }
+  #kont{
+    grid-area: kont;
+    background-color: rgb(235, 235, 206);
+    font-size: larger;
+  }
+ #nev{
+    background-color: rgb(235, 235, 206);
+    grid-area: nev;
+ }
+ .kosarica{
+  width: 40px;
+ }
+ .logo{
+  width: 90px;
+ }
+ .trava{
+  display: flex;
+  width: 100%;
+ }
+ .pozdrav{
+  background-image: url("../slike/pozdrav4.jpg");
+  width:100%
+ }
+ .natpis{
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .proizvod{
+  font-size: larger;
+ }
+ .button{
+  font-size: large;
+  background-color: rgb(235, 235, 206);
+ }
+ .slika{
+  height: 100px;
+  width: 150px;
+ }
+ #Meso{
+  font-weight: bold;
+ }
+ .proizvod{
+  position: relative;
+ }
+ .prozkos{
+  opacity:0;
+  position: absolute;
+  top:15%;
+  left:30%;
+  height:50px;
+  width:50px;
+  cursor: pointer;
+ }
+.img:hover .prozkos{
+  opacity: 1;
+ }
+ .img{
+  position:relative;
+ }
+ #kosCount{
+  position: relative;
+ }
+ .quantity{
+  font-size: medium;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  bottom:0;
+  left:70%;
+  z-index:1px;
+  padding:1px 5px;
+ }
+.par{
+  border: 1px solid black;
+}
+
+ @media only screen and (max-width:1024px){
+    .grid-container{
+        grid-template-columns: 0.5fr 1fr 1fr ;
+        grid-template-rows: 0.2fr 0.2fr 1.2fr 1.5fr 1fr 1fr;
+        grid-template-areas:
+            "log nev nev"
+            "tren tren kos"
+            "poz poz poz"
+            "kat proiz proiz"
+            "kat proiz proiz"
+            "kont proiz proiz";
+    }
+    #nev{
+      background-color: rgb(194, 225, 235);
+    }
+    .natpis{
+      font-size: 2.8rem;
+    }
+    #kont{
+      grid-area: kont;
+      background-color: rgb(235, 235, 206);
+      font-size: medium;
+    }
+     .proizvod{
+      font-size: 15px;
+     }
+     .slika{
+      height: 80px;
+      width: 100px;
+     }
+     
+     .button{
+      font-size: medium;
+     }
+
+ }
